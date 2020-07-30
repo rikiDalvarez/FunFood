@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+h1{
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+  color: #281414;
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  background-image: url(./assets/tiger.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 80px;
+}
