@@ -124,7 +124,17 @@ export default function App() {
   );
 }
 function Locate({ panTo }) {
-  return <button className="locate"><img src="compass.svg" alt="compass - locate me" /></button>
+  return <button className="locate"
+    onClick={() => {
+      navigator.geolocation.getCurrentPosition((position) => {
+        panTo({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        })
+      }, () => null)
+    }}>
+    <img src="compass.svg" alt="compass - locate me" />
+  </button>
 }
 function Search({ panTo }) {
   const {
@@ -164,11 +174,13 @@ function Search({ panTo }) {
           placeholder="Enter an address"
         />
         <ComboboxPopover>
-          {status === "OK" && data.map(({ place_id, description }) => (
-            <ComboboxOption
-              key={place_id}
-              value={description} />
-          ))}
+          <ComboboxList>
+            {status === "OK" && data.map(({ place_id, description }) => (
+              <ComboboxOption
+                key={place_id}
+                value={description} />
+            ))}
+          </ComboboxList>
         </ComboboxPopover>
 
       </Combobox>

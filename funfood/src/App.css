@@ -41,3 +41,7 @@ h1{
   border: none;
   z-index: 10;
 }
+.locate img{
+  height: 40px;
+  width: auto;
+}
