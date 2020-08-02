@@ -63,15 +63,16 @@ export default function App() {
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
   })
+
   //option to set new restaurant by clicking in the map a new location. create a button(problably a component with button and the option of add new restaurant)
   // const onMapClick = React.useCallback((e) => {
   //   setAddress((current) => [{ lat: e.latLng.lat(), lng: e.latLng.lng() }]);
   // }, [])
 
+
   const panTo = React.useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(15);
-
   }, []);
 
 
@@ -80,10 +81,12 @@ export default function App() {
     libraries,
   })
 
+
   if (loadError) return " Error loading maps";
   if (!isLoaded) return "Loading Maps"
   return (
     <div className="App">
+
       <h1>FunFood </h1>
 
       <Search panTo={panTo} />
@@ -98,23 +101,40 @@ export default function App() {
         onLoad={onMapLoad}
       >
         {restaurants.map(restaurant => <Marker
+
           key={restaurant.name}
-          position={{ lat: restaurant.position.lat, lng: restaurant.position.lng }}
+
+          position={{
+            lat: restaurant.position.lat,
+            lng: restaurant.position.lng
+          }}
+
           icon={{
             url: '/tiger_marker.svg',
             scaledSize: new window.google.maps.Size(40, 40)
           }}
+
           onClick={() => {
             setSelected(restaurant);
-
           }}
         />)}
-        {selected ? (<InfoWindow position={{ lat: selected.position.lat, lng: selected.position.lng, }}
+
+        {selected ? (<InfoWindow position={{
+          lat: selected.position.lat,
+          lng: selected.position.lng,
+        }}
+
           onCloseClick={() => {
             setSelected(null)
           }}>
+
           <div>
             <h2>{selected.name} </h2>
+            {/* add image from database here */}
+            <img src="compass-64.png" alt="something" />
+            <h2>{selected.kidsArea ? "🎪kids area" : "⚠︎ working on our area"}</h2>
+            <h2>{selected.toys ? "🎮 toys!" : "⚠︎ looking for toys"}</h2>
+            <h2>{selected.kidsMenu ? "🍲 kids menu" : "⚠︎ working on our menu"}</h2>
           </div>
         </InfoWindow>) : null}
       </GoogleMap>
@@ -133,7 +153,8 @@ function Locate({ panTo }) {
         })
       }, () => null)
     }}>
-    <img src="compass.svg" alt="compass - locate me" />
+    <img src="compass.svg"
+      alt="compass - locate me" />
   </button>
 }
 function Search({ panTo }) {
@@ -145,7 +166,10 @@ function Search({ panTo }) {
     clearSuggestions,
   } = usePlacesAutocomplete({
     requestOptions: {
-      location: { lat: () => 41.363218, lng: () => 2.135348, },
+      location: {
+        lat: () => 41.363218,
+        lng: () => 2.135348,
+      },
       radius: 200 * 1000,
     }
   })

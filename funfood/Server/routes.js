@@ -3,5 +3,6 @@ const controller = require("./controllers/controllers")
 
 router.get('/restaurants', controller.getAll);
 router.post('/restaurants', controller.createOne);
+router.put('/restaurants', controller.updateOne)
 
 module.exports = router;
