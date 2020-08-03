@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ApiService from "./ApiService";
+import Sidebar from "./Sidebar";
 // import { markerTiger } from './assets/tiger_marker.svg';
 
 import {
@@ -24,9 +25,6 @@ import '@reach/combobox/styles.css';
 import './App.css';
 import mapStyle from "./mapStyle"
 
-
-
-
 const libraries = ["places"];
 const mapContainerStyle = {
   height: "100vh",
@@ -49,7 +47,6 @@ export default function App() {
   const [selected, setSelected] = useState(null);
   // const [address, setAddress] = useState(null)
 
-
   useEffect(() => {
     ApiService.getRestaurants()
       .then((restaurantList) => {
@@ -57,7 +54,6 @@ export default function App() {
       });
 
   }, [])
-
 
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
@@ -81,9 +77,10 @@ export default function App() {
     libraries,
   })
 
-
   if (loadError) return " Error loading maps";
   if (!isLoaded) return "Loading Maps"
+
+
   return (
     <div className="App">
 
@@ -100,24 +97,22 @@ export default function App() {
         // onClick={onMapClick}
         onLoad={onMapLoad}
       >
+
         {restaurants.map(restaurant => <Marker
-
           key={restaurant.name}
-
           position={{
             lat: restaurant.position.lat,
             lng: restaurant.position.lng
           }}
-
           icon={{
             url: '/tiger_marker.svg',
             scaledSize: new window.google.maps.Size(40, 40)
           }}
-
           onClick={() => {
             setSelected(restaurant);
           }}
         />)}
+
 
         {selected ? (<InfoWindow position={{
           lat: selected.position.lat,
@@ -128,21 +123,29 @@ export default function App() {
             setSelected(null)
           }}>
 
-          <div>
-            <h2>{selected.name} </h2>
-            {/* add image from database here */}
-            <img src="compass-64.png" alt="something" />
-            <h2>{selected.kidsArea ? "🎪kids area" : "⚠︎ working on our area"}</h2>
-            <h2>{selected.toys ? "🎮 toys!" : "⚠︎ looking for toys"}</h2>
-            <h2>{selected.kidsMenu ? "🍲 kids menu" : "⚠︎ working on our menu"}</h2>
+          <div className="restaurant__card">
+            <h2 className="restaurant__card__name">{selected.name} </h2>
+            {/* add image from database here/ possible create a component to simplify the props for each topic. */}
+            <img className="restaurant__card__image" src={selected.image} alt="something" />
+            <div className="restaurant__card__options" >{selected.kidsArea ? <div>
+              <img className="restaurant__card__options__icon" src="playground-3.svg" alt="playground" /> <h2> kids area </h2> </div> : "⚠︎ working on our area"}</div>
+            <div className="restaurant__card__options" >{selected.toys ? <div>
+              <img className="restaurant__card__options__icon" src="toy-3.svg" alt="toys" /> <h2> we have toys </h2> </div> : "⚠︎ working on our toys"}</div>
+            <div className="restaurant__card__options" >{selected.toys ? <div>
+              <img className="restaurant__card__options__icon" src="menu-3.svg" alt="menu" /> <h2> we have menu </h2> </div> : "⚠︎ working on our menu"}</div>
           </div>
         </InfoWindow>) : null}
       </GoogleMap>
+      <div className="restaurant__info">
+        <Sidebar />
+        {/* LOGIN AND FILTER FUNCTIONALITIES.<Info ></Info> create a info restaurant on the left side, with pictures, addres,  */}
 
-
+      </div>
     </div>
   );
 }
+
+
 function Locate({ panTo }) {
   return <button className="locate"
     onClick={() => {
@@ -208,6 +211,7 @@ function Search({ panTo }) {
         </ComboboxPopover>
 
       </Combobox>
+
     </div>
   )
 }

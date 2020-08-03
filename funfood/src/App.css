@@ -1,10 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap");
+
 .App {
   text-align: center;
 }
 
+.base__container{
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.base__container__header{
+  font-size: 30px;
+  font-family: Butterfly Kids;
+}
+
+.form{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Butterfly Kids;
+  
+}
+
+.form__group{
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  
+}
+
+.btn {
+  font-size: 21px;
+  padding: 5px 20px;
+  border: 0;
+  background-color: #fcba68;
+  color: #fff;
+  border-radius: 3px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+  font-family: Butterfly Kids;
+}
+
+label{
+font-size: 20px;
+}
+
+.form__group__input{
+  
+  padding: 0px 10px;
+  font-family: Butterfly Kids ;
+  background-color: rgb(217, 238, 245);
+  border: 0;
+  border-radius: 4px;
+  transition: all 250ms ease-in-out;
+}
+
+input{
+  font-family: Butterfly Kids ;
+  font-size: 20px;
+  background-color: rgb(217, 238, 245);
+  border-radius: 4px;
+  transition: all 250ms ease-in-out;
+  border: rgb(230, 205, 122);
+  border-style: solid;
+  border-width: 0.1px;
+}
+
 h1{
   position: absolute;
-  top: 3rem;
+  top: 2.6rem;
   left: 5rem;
   color: #281414;
   z-index: 5;
@@ -16,6 +84,10 @@ h1{
   width: 200px;
   height: 80px;
   cursor: pointer;
+}
+
+.footer{
+  margin-top: 26px;
 }
 
 .search{
@@ -48,4 +120,24 @@ h1{
 }
 .locate {
   cursor: pointer;
+}
+
+.restaurant__info{
+  position: absolute;
+  top: 10rem;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 400px;
+  z-index: 10;
+  border-radius: 5px;
+  background-color:rgb(112, 206, 178);
+  border-style: solid;
+  border-color: rgb(245, 232, 204);
+  color: white;
+  height: 400px;
+}
+.restaurant__card__options__icon{
+  height: 36px;
+  width: auto;
 }

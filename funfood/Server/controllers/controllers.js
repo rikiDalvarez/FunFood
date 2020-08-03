@@ -30,18 +30,19 @@ async function createOne(req, res) {
 }
 
 async function updateOne(req, res) {
-    const name = req.body.name;
     try {
-        const restaurant = await restaurantModel.updateOne({ name: name }, {
-            name: req.body.name,
-            image: req.body.image,
-            kidsArea: req.body.kidsArea,
-            toys: req.body.toys,
-            kidsMenu: req.body.kidsMenu,
-            position: { lat: req.body.position.lat, lng: req.body.position.lng }
-        });
+        const updateRestaurant = await restaurantModel.findOneAndUpdate(
+            { _id: req.params.id },
+            { image: req.body.image },
+            { useFindAndModify: false, new: true },
+
+        );
+        //     const restaurant = await restaurantModel.findOneAndUpdate({ id: id }, {
+        //         image: req.body.image,
+        //     });
+        console.log(updateRestaurant)
         res.status(201);
-        res.json(restaurant);
+        res.send(updateRestaurant)
     } catch (error) {
         console.log("Error: ", error);
         res.sendStatus(500);
