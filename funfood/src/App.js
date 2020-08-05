@@ -126,13 +126,27 @@ export default function App() {
           <div className="restaurant__card">
             <h2 className="restaurant__card__name">{selected.name} </h2>
             {/* add image from database here/ possible create a component to simplify the props for each topic. */}
-            <img className="restaurant__card__image" src={selected.image} alt="something" />
+            <img
+              className="restaurant__card__image"
+              src={selected.image} alt="photo of the restaurant" />
             <div className="restaurant__card__options" >{selected.kidsArea ? <div>
-              <img className="restaurant__card__options__icon" src="playground-3.svg" alt="playground" /> <h2> kids area </h2> </div> : "⚠︎ working on our area"}</div>
+              <img
+                className="restaurant__card__options__icon"
+                src="playground-3.svg" alt="playground" />
+              <h2 className="restaurant__card__text"> we have fun area </h2> </div> : "⚠︎ working on our area"}
+            </div>
             <div className="restaurant__card__options" >{selected.toys ? <div>
-              <img className="restaurant__card__options__icon" src="toy-3.svg" alt="toys" /> <h2> we have toys </h2> </div> : "⚠︎ working on our toys"}</div>
+              <img
+                className="restaurant__card__options__icon"
+                src="toy-3.svg" alt="toys" />
+              <h2 className="restaurant__card__text"> we have fun toys </h2> </div> : "⚠︎ working on our toys"}
+            </div>
             <div className="restaurant__card__options" >{selected.toys ? <div>
-              <img className="restaurant__card__options__icon" src="menu-3.svg" alt="menu" /> <h2> we have menu </h2> </div> : "⚠︎ working on our menu"}</div>
+              <img
+                className="restaurant__card__options__icon"
+                src="menu-3.svg" alt="menu" />
+              <h2 className="restaurant__card__text"> we have fun menu </h2> </div> : "⚠︎ working on our menu"}
+            </div>
           </div>
         </InfoWindow>) : null}
       </GoogleMap>

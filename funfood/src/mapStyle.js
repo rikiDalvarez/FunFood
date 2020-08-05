@@ -1,4 +1,5 @@
 export default [
+    ////////////////////////OPTION 1//////////
     //     {
     //         "featureType": "all",
     //         "elementType": "geometry.fill",
@@ -283,6 +284,7 @@ export default [
     //     }
     // ]
     // // [
+        //////////////////////OPTION 2///////////
     {
         "featureType": "administrative",
         "elementType": "labels",
@@ -383,6 +385,7 @@ export default [
         ]
     }
 ]
+///////////////////////////OPTION 3////////////////
     // [
 //     {
 //         "featureType": "poi",

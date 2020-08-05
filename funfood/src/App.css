@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  min-width: 40%;
 }
 
 .base__container{
@@ -128,16 +129,60 @@ h1{
   left: 10%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 400px;
+  min-width: 100px;
+  max-width: 300px;
   z-index: 10;
   border-radius: 5px;
   background-color:rgb(112, 206, 178);
   border-style: solid;
   border-color: rgb(245, 232, 204);
   color: white;
-  height: 400px;
+  height: 300px;
 }
+.restaurant__card__options{
+  display: inline-flex;
+  justify-content: space-around;
+  
+}
+
 .restaurant__card__options__icon{
   height: 36px;
   width: auto;
+  border:1px solid gray ;
+  border-radius: 50%;
+  display: inline-flex;
+
+}
+
+.restaurant__card__image{
+  height: 200px;
+  width: auto;
+  border-radius: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+.restaurant__card__text {
+  font-size: 10px;
+  margin: 5px 10px 5px 10px;
+  display: flex;
+  justify-content: space-evenly ;
+}
+
+.restaurant__card__name{
+  background-color: rgb(247, 164, 62);
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  border: 2px solid rgb(152, 227, 204);
+}
+
+h3{
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
 }
