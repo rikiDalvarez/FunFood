@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ApiService from "./ApiService";
+
 // import { markerTiger } from './assets/tiger_marker.svg';
 
 import {
@@ -23,8 +24,6 @@ import '@reach/combobox/styles.css';
 
 import './App.css';
 import mapStyle from "./mapStyle"
-
-
 
 
 const libraries = ["places"];
@@ -63,10 +62,13 @@ export default function App() {
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
   })
+
   //option to set new restaurant by clicking in the map a new location. create a button(problably a component with button and the option of add new restaurant)
   // const onMapClick = React.useCallback((e) => {
   //   setAddress((current) => [{ lat: e.latLng.lat(), lng: e.latLng.lng() }]);
   // }, [])
+
+
 
   const panTo = React.useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
@@ -82,8 +84,12 @@ export default function App() {
 
   if (loadError) return " Error loading maps";
   if (!isLoaded) return "Loading Maps"
+
+
+
   return (
     <div className="App">
+
       <h1>FunFood </h1>
 
       <Search panTo={panTo} />
@@ -97,9 +103,14 @@ export default function App() {
         // onClick={onMapClick}
         onLoad={onMapLoad}
       >
+
         {restaurants.map(restaurant => <Marker
           key={restaurant.name}
-          position={{ lat: restaurant.position.lat, lng: restaurant.position.lng }}
+          position={{
+            lat: restaurant.position.lat,
+            lng: restaurant.position.lng
+          }}
+
           icon={{
             url: '/tiger_marker.svg',
             scaledSize: new window.google.maps.Size(40, 40)
@@ -109,22 +120,68 @@ export default function App() {
 
           }}
         />)}
-        {selected ? (<InfoWindow position={{ lat: selected.position.lat, lng: selected.position.lng, }}
+
+
+        {selected ? (<InfoWindow position={{
+          lat: selected.position.lat,
+          lng: selected.position.lng,
+        }}
+
           onCloseClick={() => {
             setSelected(null)
           }}>
-          <div>
-            <h2>{selected.name} </h2>
+
+          <div className="restaurant__card">
+            <h2 className="restaurant__card__name">{selected.name} </h2>
+            {/* add image from database here/ possible create a component to simplify the props for each topic. */}
+            <img
+              className="restaurant__card__image"
+              src={selected.image} alt="photo of the restaurant" />
+            <div className="restaurant__card__options" >{selected.kidsArea ? <div>
+              <img
+                className="restaurant__card__options__icon"
+                src="playground-3.svg" alt="playground" />
+              <h2 className="restaurant__card__text"> we have fun area </h2> </div> : "⚠︎ working on our area"}
+            </div>
+            <div className="restaurant__card__options" >{selected.toys ? <div>
+              <img
+                className="restaurant__card__options__icon"
+                src="toy-3.svg" alt="toys" />
+              <h2 className="restaurant__card__text"> we have fun toys </h2> </div> : "⚠︎ working on our toys"}
+            </div>
+            <div className="restaurant__card__options" >{selected.toys ? <div>
+              <img
+                className="restaurant__card__options__icon"
+                src="menu-3.svg" alt="menu" />
+              <h2 className="restaurant__card__text"> we have fun menu </h2> </div> : "⚠︎ working on our menu"}
+            </div>
           </div>
         </InfoWindow>) : null}
       </GoogleMap>
+      <div className="restaurant__info">
+        <Sidebar />
+        {/* LOGIN AND FILTER FUNCTIONALITIES.<Info ></Info> create a info restaurant on the left side, with pictures, addres,  */}
 
-
+      </div>
     </div>
   );
 }
+
+
 function Locate({ panTo }) {
-  return <button className="locate"><img src="compass.svg" alt="compass - locate me" /></button>
+  return <button className="locate"
+    onClick={() => {
+      navigator.geolocation.getCurrentPosition((position) => {
+        panTo({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        })
+      }, () => null)
+    }}>
+    <img src="compass.svg"
+      alt="compass - locate me" />
+  </button>
+
 }
 function Search({ panTo }) {
   const {
@@ -135,7 +192,12 @@ function Search({ panTo }) {
     clearSuggestions,
   } = usePlacesAutocomplete({
     requestOptions: {
-      location: { lat: () => 41.363218, lng: () => 2.135348, },
+
+      location: {
+        lat: () => 41.363218,
+        lng: () => 2.135348,
+      },
+
       radius: 200 * 1000,
     }
   })
@@ -164,14 +226,18 @@ function Search({ panTo }) {
           placeholder="Enter an address"
         />
         <ComboboxPopover>
-          {status === "OK" && data.map(({ place_id, description }) => (
-            <ComboboxOption
-              key={place_id}
-              value={description} />
-          ))}
+          <ComboboxList>
+            {status === "OK" && data.map(({ place_id, description }) => (
+              <ComboboxOption
+                key={place_id}
+                value={description} />
+            ))}
+          </ComboboxList>
         </ComboboxPopover>
 
       </Combobox>
+
+
     </div>
   )
 }
