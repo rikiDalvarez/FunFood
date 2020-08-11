@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
 @import url("https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap");
 
 .App {
@@ -73,19 +70,13 @@ input{
   border: rgb(230, 205, 122);
   border-style: solid;
   border-width: 0.1px;
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
 }
 
 h1{
   position: absolute;
   top: 2.6rem;
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
   left: 5rem;
   color: #281414;
   z-index: 5;
@@ -96,19 +87,13 @@ h1{
   background-repeat: no-repeat;
   width: 200px;
   height: 80px;
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
   cursor: pointer;
 }
 
 .footer{
   margin-top: 26px;
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
 }
 
 .search{
@@ -134,10 +119,7 @@ h1{
   background: none;
   border: none;
   z-index: 10;
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
 }
 .locate img{
   height: 40px;
@@ -209,8 +191,5 @@ h3{
   line-height: 1.5;
   display: inline-block;
   vertical-align: middle;
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
 }

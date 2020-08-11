@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ApiService from "./ApiService";
-<<<<<<< HEAD
-import Sidebar from "./Sidebar";
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
+import Sidebar from "./Sidebar";
+
+
+
 // import { markerTiger } from './assets/tiger_marker.svg';
 
 import {
@@ -29,15 +29,11 @@ import '@reach/combobox/styles.css';
 import './App.css';
 import mapStyle from "./mapStyle"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
-const libraries = ["places"];
 const mapContainerStyle = {
   height: "100vh",
   width: "100vw",
 };
+const libraries = ["places"];
 
 const center = {
   lat: 41.363218,
@@ -55,10 +51,6 @@ export default function App() {
   const [selected, setSelected] = useState(null);
   // const [address, setAddress] = useState(null)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
   useEffect(() => {
     ApiService.getRestaurants()
       .then((restaurantList) => {
@@ -67,10 +59,7 @@ export default function App() {
 
   }, [])
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
   const mapRef = React.useRef();
   const onMapLoad = React.useCallback((map) => {
     mapRef.current = map;
@@ -81,18 +70,10 @@ export default function App() {
   //   setAddress((current) => [{ lat: e.latLng.lat(), lng: e.latLng.lng() }]);
   // }, [])
 
-
-<<<<<<< HEAD
-  const panTo = React.useCallback(({ lat, lng }) => {
-    mapRef.current.panTo({ lat, lng });
-    mapRef.current.setZoom(15);
-=======
-
   const panTo = React.useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(15);
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
   }, []);
 
 
@@ -104,11 +85,6 @@ export default function App() {
   if (loadError) return " Error loading maps";
   if (!isLoaded) return "Loading Maps"
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
   return (
     <div className="App">
 
@@ -132,20 +108,13 @@ export default function App() {
             lat: restaurant.position.lat,
             lng: restaurant.position.lng
           }}
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
           icon={{
             url: '/tiger_marker.svg',
             scaledSize: new window.google.maps.Size(40, 40)
           }}
           onClick={() => {
             setSelected(restaurant);
-<<<<<<< HEAD
-=======
-
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
           }}
         />)}
 
@@ -209,10 +178,7 @@ function Locate({ panTo }) {
     <img src="compass.svg"
       alt="compass - locate me" />
   </button>
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
 }
 function Search({ panTo }) {
   const {
@@ -223,18 +189,12 @@ function Search({ panTo }) {
     clearSuggestions,
   } = usePlacesAutocomplete({
     requestOptions: {
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
       location: {
         lat: () => 41.363218,
         lng: () => 2.135348,
       },
-<<<<<<< HEAD
-=======
 
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
       radius: 200 * 1000,
     }
   })
@@ -274,10 +234,6 @@ function Search({ panTo }) {
 
       </Combobox>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
     </div>
   )
 }
