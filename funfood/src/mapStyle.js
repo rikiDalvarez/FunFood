@@ -1,4 +1,8 @@
 export default [
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
     ////////////////////////OPTION 1//////////
     //     {
     //         "featureType": "all",
@@ -284,64 +288,123 @@ export default [
     //     }
     // ]
     // // [
+<<<<<<< HEAD
         //////////////////////OPTION 2///////////
     {
         "featureType": "administrative",
+=======
+    //////////////////////OPTION 2///////////
+    {
+        "featureType": "administrative",
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "elementType": "labels",
         "stylers": [
             {
                 "visibility": "off"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
             }
         ]
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "featureType": "landscape",
         "elementType": "all",
         "stylers": [
             {
                 "visibility": "on"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
             }
         ]
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "featureType": "poi.attraction",
         "elementType": "labels",
         "stylers": [
             {
                 "visibility": "on"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
             }
         ]
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "featureType": "poi.business",
         "elementType": "all",
         "stylers": [
             {
                 "visibility": "on"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
             }
         ]
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "featureType": "poi.business",
         "elementType": "labels",
         "stylers": [
             {
                 "visibility": "on"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
             }
         ]
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "featureType": "poi.business",
         "elementType": "labels.icon",
         "stylers": [
             {
                 "visibility": "off"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
             }
         ]
     },
     {
+<<<<<<< HEAD
         "featureType": "poi.government",
         "elementType": "labels",
+=======
+
+        "featureType": "poi.government",
+        "elementType": "labels",
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "stylers": [
             {
                 "visibility": "on"
@@ -349,33 +412,62 @@ export default [
         ]
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "featureType": "poi.school",
         "elementType": "all",
         "stylers": [
             {
                 "visibility": "on"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
             }
         ]
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "featureType": "poi.school",
         "elementType": "labels",
         "stylers": [
             {
                 "visibility": "off"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
             }
         ]
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "featureType": "road",
         "elementType": "all",
         "stylers": [
             {
                 "visibility": "on"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
             }
         ]
     },
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
         "featureType": "road",
         "elementType": "labels",
         "stylers": [
@@ -582,4 +674,9 @@ export default [
 //             }
 //         ]
 //     }
+<<<<<<< HEAD
 // ]
+=======
+// ]
+
+>>>>>>> 5782893df9001e05c47c15fc971f833347d2f34d
