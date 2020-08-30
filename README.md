@@ -6,7 +6,7 @@
 <img src="funfood/public/Logo-1.png" width="400" />
 
 # What is FunFood
-🐯 An app to help parents find restuarants where they can enjoy and their child have fun. 🐯
+🐯 An app to help parents find restaurants where they can enjoy and their child have fun. 🐯
 
 
 👨‍👩‍👧‍👦 The purpose of the app is make life of parents easier and practice react hooks.
