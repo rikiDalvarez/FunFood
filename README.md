@@ -21,29 +21,27 @@
 [Tech Stack](#tech-stack)  
 
 # Running FunFood
-Clone the repo on your machine with the command npm start | yarn start, it depends which dependency you are running globally.
+- Fork & clone this repo  
+  Run `npm i` in funfood/server directory to install the backend dependencies. 
+  Now run `nodemon index.js` and you should get this message:
+`🚀app running at http://localhost:5005`
 
-Then open the repo in your preferreble clde editor. I use vscode.
-Go into the server folder and typw npm i, to install all the necessaries dependencies.
-Now you can start the server by typing nodemon or node index.js.
-You should get a message of server running on localhost...
-
-Now go back to the directory src and run npm i for the front end dependencies.
-Set .env.local with react_api_key= "you need yo get an api key on google dev"
-Otherwise the map wont be rendered.
+- Now go back to funfood directory and run `npm i`for the frontend dependencies. 
+  Adjust the .env.local to with react_api_key= "your API 🔑 "
+  (You need to get an api key on google dev, if not the map wont be rendered.)
+  Run `npm start`
 
 ![](funfood/public/choosingRestaurant.png)
 
-# Observations:
-The app is very raw, the first step would implement a relational database(postgres)
-Need to add filter options for which type of feature parents are looking in the restaurant.
-Defnetyl better CSS and more animations.
-Authentication and authorization for users and restaurant owners.
-Option to rate the restaurant, leave a comment, and endorse each feature of the restaueant.
-Each fesature should be rendered different depending by how nice it is.
-
-Premium option for restaurants
-And for users(adding discounts)
+# Upcoming improvements :
+- Migrate to a relational database(postgres)
+- Add filter options for which type of feature parents are looking in the restaurant.
+- Optimize css with animations.
+- Authentication and authorization for users and restaurant owners.
+- Option to rate the restaurant, leave a comment, and endorse each feature of the restaueant.
+- Each restaurant feature should be rendered more different in relation to how nice is the restaurant.
+- Premium option for restaurants and for users(adding discounts)
+- Option to pay with the application.
 
 ## Tech Stack
 
