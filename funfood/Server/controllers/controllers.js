@@ -53,11 +53,5 @@ async function updateOne(req, res) {
 }
 
 
-<<<<<<< HEAD
-
 module.exports = { getAll, createOne, updateOne }
-
-=======
-module.exports = { getAll, createOne, updateOne }
->>>>>>> 731bd297cfcd3ffc04c5bbe41ad850de5e671b64
 
