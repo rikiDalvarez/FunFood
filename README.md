@@ -5,7 +5,6 @@
 <br>
 <img src="funfood/public/Logo-1.png" width="400" />
 
-# What is FunFood
 🐯 An app to help parents find restaurants where they can enjoy and their child have fun. 🐯
 
 
