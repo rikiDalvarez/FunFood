@@ -3,13 +3,15 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/rikidalvarez/funfood)
 <br>
 <br>
-![](funfood/public/Logo-1.png)
+<img src="funfood/public/Logo-1.png" width="400" />
 
 # What is FunFood
 🐯 An app to help parents find restuarants where they can enjoy and their child have fun. 🐯
 
 
 👨‍👩‍👧‍👦 The purpose of the app is make life of parents easier and practice react hooks.
+<br>
+<br>
 ![](funfood/public/Firstimage-1.png)
 
 ## Table of contents
