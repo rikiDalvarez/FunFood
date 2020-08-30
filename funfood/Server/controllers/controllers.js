@@ -3,6 +3,7 @@ const restaurantModel = require('../models/RestaurantModel');
 async function getAll(_, res) {
     try {
         const restaurants = await restaurantModel.find();
+
         res.status(200);
         res.json(restaurants);
     } catch (error) {
@@ -52,7 +53,11 @@ async function updateOne(req, res) {
 }
 
 
+<<<<<<< HEAD
 
 module.exports = { getAll, createOne, updateOne }
 
+=======
+module.exports = { getAll, createOne, updateOne }
+>>>>>>> 731bd297cfcd3ffc04c5bbe41ad850de5e671b64
 
