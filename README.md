@@ -5,11 +5,10 @@
 
 # What is FunFood
 🐯 An app to help parents find restuarants where they can enjoy and their child have fun. 🐯
+![](funfood/public/Logo.ong)
 
 👨‍👩‍👧‍👦 The purpose of the app is make life of parents easier and practice react hooks.
-![](funfood/public/Overall_look.png)
-![](funfood/public/ChoosingRestaurant.png)
-
+![](funfood/public/Firstimage.png)
 # Running FunFood
 Clone the repo on your machine with the command npm start | yarn start, it depends which dependency you are running globally.
 
@@ -21,6 +20,8 @@ You should get a message of server running on localhost...
 Now go back to the directory src and run npm i for the front end dependencies.
 Set .env.local with react_api_key= "you need yo get an api key on google dev"
 Otherwise the map wont be rendered.
+
+![](funfood/public/choosingRestaurant.png)
 
 # Observations:
 The app is very raw, the first step would implement a relational database(postgres)
