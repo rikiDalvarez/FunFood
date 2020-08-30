@@ -1,14 +1,23 @@
-# FunFood
 ![APM](https://img.shields.io/apm/l/react?style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/rikiDalvarez/funfood?logo=github&style=plastic)
 ![GitHub language count](https://img.shields.io/github/languages/count/rikidalvarez/funfood)
+<br>
+<br>
+![](funfood/public/Logo-1.png)
 
 # What is FunFood
 🐯 An app to help parents find restuarants where they can enjoy and their child have fun. 🐯
-![](funfood/public/Logo.ong)
+
 
 👨‍👩‍👧‍👦 The purpose of the app is make life of parents easier and practice react hooks.
-![](funfood/public/Firstimage.png)
+![](funfood/public/Firstimage-1.png)
+
+## Table of contents
+
+[Running FunFood](#running-funfood)  
+[Observations](#observations)  
+[Tech Stack](#tech-stack)  
+
 # Running FunFood
 Clone the repo on your machine with the command npm start | yarn start, it depends which dependency you are running globally.
 
@@ -34,8 +43,12 @@ Each fesature should be rendered different depending by how nice it is.
 Premium option for restaurants
 And for users(adding discounts)
 
-## Table of contents
+## Tech Stack
 
-[Running FunFood](#running-funfood)  
-[Observations](#observations)  
-[Tech Stack](#tech-stack)  
+:tiger: [React](https://reactjs.org/)  
+:tiger: [Express](https://expressjs.com/)  
+:tiger: [mongoDB](https://www.mongodb.com/)  
+:tiger: [Sequelize](https://sequelize.org/)  
+:tiger: [mongoose](https://mongoosejs.com/)   
+:tiger: [Google Places API](https://cloud.google.com/maps-platform/places)
+
