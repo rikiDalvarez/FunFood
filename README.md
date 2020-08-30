@@ -7,7 +7,7 @@
 🐯 An app to help parents find restuarants where they can enjoy and their child have fun. 🐯
 
 👨‍👩‍👧‍👦 The purpose of the app is make life of parents easier and practice react hooks.
-![](funfood/public/overview.png)
+![](funfood/public/Overall_look.png)
 ![](funfood/public/ChoosingRestaurant.png)
 
 # Running FunFood
