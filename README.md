@@ -1,4 +1,4 @@
-![APM](https://img.shields.io/apm/l/react?style=plastic)
+![GitHub](https://img.shields.io/github/license/rikidalvarez/funfood?style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/rikiDalvarez/funfood?logo=github&style=plastic)
 ![GitHub language count](https://img.shields.io/github/languages/count/rikidalvarez/funfood)
 <br>
