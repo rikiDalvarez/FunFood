@@ -3,7 +3,9 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/rikidalvarez/funfood)
 <br>
 <br>
+<p align="center">
 <img src="funfood/public/Logo-1.png" width="400" />
+  </p>
 
 🐯 An app to help parents find restaurants where they can enjoy and their child have fun. 🐯
 
